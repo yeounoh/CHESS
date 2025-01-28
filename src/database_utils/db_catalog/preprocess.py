@@ -27,8 +27,8 @@ if GCP_CREDENTIALS and GCP_PROJECT and GCP_REGION:
     vertexai.init(project=GCP_PROJECT, location=GCP_REGION, credentials=service_account.Credentials.from_service_account_file(GCP_CREDENTIALS))
 
 
-# EMBEDDING_FUNCTION = VertexAIEmbeddings(model_name="text-embedding-004")#OpenAIEmbeddings(model="text-embedding-3-large")
-EMBEDDING_FUNCTION = OpenAIEmbeddings(model="text-embedding-3-large")
+EMBEDDING_FUNCTION = VertexAIEmbeddings(model_name="text-embedding-004")#OpenAIEmbeddings(model="text-embedding-3-large")
+#EMBEDDING_FUNCTION = OpenAIEmbeddings(model="text-embedding-3-large")
 
 
 def make_db_context_vec_db(db_directory_path: str, **kwargs) -> None:
